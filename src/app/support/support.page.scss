@@ -1,0 +1,80 @@
+.custom-header {
+    --background: #29aebd; /* Color cian para el fondo del encabezado */
+  }
+  
+  ion-content {
+    --ion-background-color: #69e49c; /* Color de fondo verde */
+    --ion-padding-bottom: 2rem; /* Ajustar el padding inferior */
+  }
+  
+  ion-item {
+    --min-height: 40px; /* Ajustar la altura mínima de los ítems */
+  }
+  
+  ion-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .date-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  ion-label {
+    width: 50%; /* Ajustar el ancho de las etiquetas a la mitad del contenedor */
+  }
+  
+  ion-datetime {
+    width: 50%; /* Ajustar el ancho del calendario a la mitad del contenedor */
+    margin-right: 10px; /* Espacio entre el calendario y el input manual */
+  }
+  
+  ion-input {
+    width: 50%; /* Ajustar el ancho del input manual a la mitad del contenedor */
+  }
+  
+  ion-button {
+    font-size: 1rem;
+    margin-top: 0.5rem; /* Reducir el margen superior de los botones */
+  }
+  
+  .footer-message {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #888; /* Color de texto gris */
+  }
+  
+  ion-img {
+    width: 30%; /* Ajustar el ancho de la imagen según sea necesario */
+    height: auto; /* Mantener la altura proporcionalmente */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+    display: block; /* Asegurar que la imagen sea un bloque */
+    opacity: 1; /* Asegurar que la imagen sea visible */
+  }
+  .rotate {
+    transition: transform 0.5s ease;
+  }
+  
+  .rotate:hover {
+    transform: rotate(360deg);
+  }
+  .zoom {
+    transition: transform 0.3s ease;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.1);
+  }
+  .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .fade-in.loaded {
+    opacity: 1;
+  }
+    
+  
+  

@@ -1,0 +1,103 @@
+.custom-header {
+  --background: #29aebd;
+}
+
+ion-content {
+  --ion-background-color: #69e49c;
+  --ion-padding-bottom: 2rem;
+}
+
+ion-item {
+  --min-height: 40px;
+}
+
+ion-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.date-container {
+  display: flex;
+  align-items: center;
+}
+
+ion-label {
+  width: 50%;
+}
+
+ion-datetime {
+  width: 50%;
+  margin-right: 10px;
+}
+
+ion-input {
+  width: 50%;
+}
+
+ion-button {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.footer-message {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+ion-img {
+  width: 600px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+ion-img.loaded {
+  opacity: 1;
+}
+
+ion-img.loaded {
+  opacity: 1;
+  transition: transform 0.5s ease;
+}
+
+ion-img.loaded:hover {
+  transform: scale(1.1);
+}
+
+@keyframes moveImage {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(50px); }
+  100% { transform: translateX(0); }
+}
+
+ion-img.loaded {
+  opacity: 1;
+  animation: moveImage 3s infinite;
+}
+
+ion-img.loaded {
+  opacity: 1;
+  position: relative;
+}
+
+ion-img.loaded::before,
+ion-img.loaded::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7));
+}
+
+ion-img.loaded::before {
+  left: 0;
+}
+
+ion-img.loaded::after {
+  right: 0;
+}

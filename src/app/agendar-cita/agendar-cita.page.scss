@@ -1,0 +1,48 @@
+
+.custom-header {
+    --background: #29aebd; /* Color cian para el fondo del encabezado */
+  }
+  
+  ion-content {
+    --ion-background-color: #69e49c; /* Color de fondo verde */
+    --ion-padding-bottom: 2rem; /* Ajustar el padding inferior */
+  }
+  
+  ion-item {
+    --min-height: 40px; /* Ajustar la altura mínima de los ítems */
+  }
+  
+  ion-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .date-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  ion-label {
+    width: 50%; /* Ajustar el ancho de las etiquetas a la mitad del contenedor */
+  }
+  
+  ion-datetime {
+    width: 50%; /* Ajustar el ancho del calendario a la mitad del contenedor */
+    margin-right: 10px; /* Espacio entre el calendario y el input manual */
+  }
+  
+  ion-input {
+    width: 50%; /* Ajustar el ancho del input manual a la mitad del contenedor */
+  }
+  
+  ion-button {
+    font-size: 1rem;
+    margin-top: 0.5rem; /* Reducir el margen superior de los botones */
+  }
+  
+  .footer-message {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #888; /* Color de texto gris */
+  }

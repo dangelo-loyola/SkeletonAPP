@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar class="custom-header">
+    <ion-title>lista de medicos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let medico of medicos">
+      <ion-avatar slot="start">
+        <img [src]="medico.foto" [alt]="medico.nombre">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ medico.nombre }}</h2>
+        <p>{{ medico.especialidad }}</p>
+        <p>{{ medico.valoracion }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="redirectToHome()">Volver a la pagina principal</ion-button>
+</ion-content>

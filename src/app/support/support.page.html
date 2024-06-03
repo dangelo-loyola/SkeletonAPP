@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar class="custom-header">
+    <ion-title>Soporte Técnico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+      <ion-card-header>
+          Datos de Soporte Técnico
+      </ion-card-header>
+      <ion-card-content>
+          <!-- Texto de contacto -->
+          <p>Por cualquier problema que tenga, por favor contactar con:</p>
+          <ion-list lines="full">
+              <ion-item>
+                  <ion-label>Servicio Técnico:</ion-label>
+                  <ion-text>Soporte Técnico Hospital La Luz</ion-text>
+              </ion-item>
+              <ion-item>
+                  <ion-label>Correo Electrónico:</ion-label>
+                  <ion-text>soporte&#64;hospital-laluz.com</ion-text>
+
+              </ion-item>
+              <ion-item>
+                  <ion-label>Teléfono:</ion-label>
+                  <ion-text>(123) 456-7890</ion-text>
+              </ion-item>
+          </ion-list>
+      </ion-card-content>
+  </ion-card>
+
+  <!-- Imagen con animación de zoom -->
+  <ion-img src="assets/imagenes/soporte.jpg" alt="Imagen de soporte" class="zoom"></ion-img>
+
+
+  <!-- Botón para volver a la página de inicio -->
+  <ion-button expand="block" (click)="goToHomePage()">Volver a la pagina principal</ion-button>
+</ion-content>

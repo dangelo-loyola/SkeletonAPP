@@ -1,0 +1,42 @@
+.custom-header {
+  --background: #29aebd; /* Color cian para el fondo del encabezado */
+}
+
+ion-content {
+  --ion-background-color: #6beaa0; /* Color de fondo verde */
+}
+
+
+ion-title {
+  color: #000000; /* Color del texto del título en blanco para mayor contraste */
+}
+ion-content {
+  --ion-padding-bottom: 2rem; /* Ajustar el padding inferior */
+}
+
+ion-item {
+  --min-height: 40px; /* Ajustar la altura mínima de los ítems */
+}
+
+ion-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+.footer-message {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #888; /* Color de texto gris, puedes ajustarlo según tu preferencia */
+}
+
+
+ion-input {
+  font-size: 1rem;
+}
+
+ion-button {
+  font-size: 1rem;
+  margin-top: 0.5rem; /* Reducir el margen superior de los botones */
+}

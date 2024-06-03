@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar class="custom-header">
+    <ion-title>Agende su cita</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>Especialidad</ion-label>
+    <ion-select [(ngModel)]="especialidadSeleccionada">
+      <ion-select-option *ngFor="let especialidad of especialidades" [value]="especialidad">{{ especialidad }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Nombre de Médico</ion-label>
+    <ion-select [(ngModel)]="medicoSeleccionado">
+      <ion-select-option *ngFor="let medico of medicos" [value]="medico.nombre" [disabled]="medico.especialidad !== especialidadSeleccionada">
+        {{ medico.nombre }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- Selector de fecha y hora (puedes usar el componente ion-datetime de Ionic) -->
+  <ion-item>
+    <ion-label>Fecha y Hora</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY HH:mm" [(ngModel)]="fechaHoraSeleccionada"></ion-datetime>
+  </ion-item>
+
+  <!-- Botón para agendar la cita -->
+  <ion-button expand="block" (click)="agendarCita()">Aceptar Cita</ion-button>
+
+  <!-- Botón para redirigir a la página de inicio -->
+  <ion-button expand="block" routerLink="/home">Ir a Inicio</ion-button>
+</ion-content>

@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar class="custom-header">
+    <ion-title>Mi perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-content>
+            <ion-item lines="none">
+              <ion-label style="margin-right: 10px;">Nombre</ion-label>
+              <ion-input [readonly]="true" [(ngModel)]="user.nombre" class="profile-input"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label style="margin-right: 10px;">Apellido</ion-label>
+              <ion-input [readonly]="true" [(ngModel)]="user.apellido" class="profile-input"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label style="margin-right: 10px;">Fecha de Nacimiento</ion-label>
+              <ion-input [readonly]="true" [(ngModel)]="user.fecha_nacimiento" class="profile-input"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label style="margin-right: 10px;">Email</ion-label>
+              <ion-input [readonly]="true" [(ngModel)]="user.email" type="email"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label style="margin-right: 10px;">Teléfono</ion-label>
+              <ion-input [readonly]="true" [(ngModel)]="user.telefono" type="tel"></ion-input>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <form (ngSubmit)="saveProfile()" *ngIf="editMode">
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input [(ngModel)]="user.nombre" name="nombre" class="profile-input" maxlength="10" pattern="[a-zA-Z]+" required [readonly]="!editMode"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Apellido</ion-label>
+            <ion-input [(ngModel)]="user.apellido" name="apellido" class="profile-input" maxlength="10" pattern="[a-zA-Z]+" required [readonly]="!editMode"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Fecha de Nacimiento</ion-label>
+            <ion-input [(ngModel)]="user.fecha_nacimiento" name="fecha_nacimiento" type="date" class="profile-input" required [readonly]="!editMode"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input [(ngModel)]="user.email" name="email" type="email" required [readonly]="!editMode"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Teléfono</ion-label>
+            <ion-input [(ngModel)]="user.telefono" name="telefono" type="tel" pattern="[0-9]*" inputmode="numeric" maxlength="9" required [readonly]="!editMode"></ion-input>
+          </ion-item>
+          <ion-button expand="block" type="submit">Guardar Cambios</ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button expand="block" (click)="toggleEditMode()" *ngIf="!editMode">Editar mi perfil</ion-button>
+  <ion-button expand="block" (click)="goToHomePage()">Volver a la pagina principal</ion-button>
+</ion-content>
